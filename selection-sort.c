@@ -20,6 +20,8 @@ int main()
 
   printf("After: ");
   print_nums(nums, n);
+
+  free(nums);
 }
 
 int *gen_rand_nums(int n)

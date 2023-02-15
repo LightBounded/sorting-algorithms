@@ -26,8 +26,6 @@ int main()
   print_nums(nums, n);
 
   free(nums);
-
-  return 0;
 }
 
 int *gen_rand_nums(int n)

@@ -20,6 +20,8 @@ int main()
 
   printf("After: ");
   print_nums(nums, n);
+
+  free(nums);
 }
 
 void print_nums(int *nums, int n)
