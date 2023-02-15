@@ -54,21 +54,21 @@ void swap(int *a, int *b)
 
 int partition(int *nums, int low, int high)
 {
-  int pivot = nums[high];
+  int pivotValue = nums[high];
 
-  int i = low - 1;
+  int pivotIndex = low - 1;
 
   for (int j = low; j <= high - 1; j++)
   {
-    if (nums[j] < pivot)
+    if (nums[j] < pivotValue)
     {
-      i++;
-      swap(&nums[i], &nums[j]);
+      pivotIndex++;
+      swap(&nums[pivotIndex], &nums[j]);
     }
   }
 
-  swap(&nums[i + 1], &nums[high]);
-  return i + 1;
+  swap(&nums[pivotIndex + 1], &nums[high]);
+  return pivotIndex + 1;
 }
 
 void quick_sort(int *nums, int low, int high)
